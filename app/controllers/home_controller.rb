@@ -1,7 +1,12 @@
-class HomeController < ApplicationController
-  def index
-    response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+require 'overwatch'
 
-    puts response.body, response.code, response.message, response.headers.inspect
+class HomeController < ApplicationController
+
+  class LoadUp
+    include Overwatch
+  end
+
+  def index
+    puts(Overwatch.fetch_profile('pc', 'us', 'RaTskhi-1729')["name"])
   end
 end
