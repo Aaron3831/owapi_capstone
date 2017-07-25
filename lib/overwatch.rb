@@ -3,7 +3,7 @@ require "httparty"
 require 'openssl'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 require 'rubygems'
-require 'json'
+
 
 module Overwatch
   include HTTParty

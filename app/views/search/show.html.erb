@@ -1,0 +1,6 @@
+<%= form_for @search, method: :get do |f| %>
+  <%= f.text_field :platform %>
+  <%= f.submit %>
+<% end %>
+
+<%= @search.results %>

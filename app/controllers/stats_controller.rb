@@ -1,9 +1,11 @@
 class StatsController < ApplicationController
 
-include Overwatch
-
   def index
-    puts(self.fetch_profile('pc', 'us', 'RaTskhi-1729'))
   end
 
+  def show
+    stat_object = Stat.new()
+    @all_stat = stat_object.get_all()
+    puts(@all_stat)
+  end
 end
