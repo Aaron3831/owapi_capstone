@@ -7,9 +7,6 @@ class Search < ApplicationRecord
   validates :platform, :region, :battle_tag, presence: true
 
   def perform
-    @platform = platform
-    @region = region
-    @ptag = ptag
-    @results = Overwatch.fetch_profile(@platform, @region, @ptag)
+    @results = Overwatch.fetch_profile(:platform, :region, :battle_tag)
   end
 end
