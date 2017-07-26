@@ -1,9 +1,16 @@
+<%= render 'layouts/navbar' %>
+
 <%= form_for :get do |f| %>
-  <%= f.text_field :platform %>
-  <%= f.text_field :region %>
+  <%= f.label :platform, 'Your Platform' %>
+  <%= f.text_field :platform %><br>
+  <%= f.label :region, 'Your Region' %>
+  <%= f.text_field :region %><br>
+  <%= f.label :battle_tag, 'Your Battle Tag' %>
   <%= f.text_field :battle_tag %>
   <%= f.submit %>
 <% end %>
 
-
-<%= @search.results %>
+<p>
+  show
+</p>
+<%= @results %>
