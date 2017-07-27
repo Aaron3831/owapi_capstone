@@ -1,9 +1,7 @@
 <%= render 'layouts/navbar' %>
-
-
-
-<%= @results_hero %>
+  <%= @heroes %>
+<br>
 
 <p>
-  results hero?
+  Win Percentage: %<%= @competitivehero["topHeroes"][@heroes]["winPercentage"] %>
 </p>

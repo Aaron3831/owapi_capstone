@@ -10,7 +10,7 @@ class HerosController < ApplicationController
     @replacement = @battle_tag.gsub('#', '-')
     # call_hero = "/#{@platform}/#{@region}/#{@replacement}/heroes/#{@heroes}"
     @results_hero = Overwatchhero.fetch_complete(@platform, @region, @replacement, @heroes)
-
+    @competitivehero = @results_hero["competitiveStats"]
   end
 
   def show
@@ -25,6 +25,6 @@ class HerosController < ApplicationController
     @replacement = @battle_tag.gsub('#', '-')
     # call_hero = "/#{@platform}/#{@region}/#{@replacement}/heroes/#{@heroes}"
     @results_hero = Overwatchhero.fetch_hero(@platform, @region, @replacement, @heroes)
-
+    @competitivehero = @results_hero["competitiveStats"]
   end
 end
