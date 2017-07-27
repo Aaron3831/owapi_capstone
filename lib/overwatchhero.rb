@@ -5,12 +5,12 @@ OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 require 'rubygems'
 
 
-module OverwatchComplete
+module Overwatchhero
   include HTTParty
   base_uri 'https://ow-api.com/v1/stats/'
 
-  def self.fetch_complete(platform, region, battle_tag)
-    call = "/#{platform}/#{region}/#{battle_tag}/complete"
+  def self.fetch_hero(platform, region, battle_tag, heroes)
+    call = "/#{platform}/#{region}/#{battle_tag}/heroes/#{heroes}"
     response = get(call)
     json = JSON.parse(response.body)
   end

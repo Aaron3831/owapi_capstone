@@ -1,0 +1,18 @@
+<%= render 'layouts/navbar' %>
+
+<%= form_for :get do |f| %>
+  <%= f.label :heroes, 'Specific Hero Stats' %>
+  <%= f.select :heroes, [['Bastion','bastion'],['dVa','dVa'],['Genji','genji'],['hanzo','hanzo'],['junkrat','junkrat'],['lúcio','lúcio'],['mccree','mccree'],['mei','mei'],['mercy','mercy'],['orisa','orisa'],['pharah','pharah'],['reaper ','reaper '],['reinhardt','reinhardt'],['roadhog','roadhog'],['soldier76','soldier76'],['sombra','sombra'],['symmetra','symmetra'],['torbjörn','torbjörn'],['tracer','tracer'],['widowmaker ','widowmaker '],['winston','winston'],['zarya','zarya'],['zenyatta','zenyatta']] %>
+  <%= f.label :platform, 'Your Platform'  %>
+  <%= f.select :platform, [['PC','pc'],['PS4','ps4'],['Xbox','xbox']] %>
+  <%= f.label :region, 'Your Region'  %>
+  <%= f.select :region, [['US','us'],['EU','eu'],['Asia','asia']] %>
+  <%= label_tag :battle_tag, 'Your Battle Tag' %>
+  <%= f.text_field :battle_tag %>
+  <%= f.submit %>
+<% end %>
+
+<p>
+  showhero
+</p>
+<%= @results_hero %>

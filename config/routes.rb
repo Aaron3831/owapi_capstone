@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   resources :stats
 
-  resource :searches 
+  resource :hero
+
+  resource :searches
+
+  resource :details
+
 end
